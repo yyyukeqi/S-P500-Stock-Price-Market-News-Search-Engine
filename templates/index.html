@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-color: rgba(255,255,255,0.9);
+        background-image: url('https://www.skillsuccess.com/wp-content/uploads/2020/08/stock-market-chart-2.jpg');
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-blend-mode: lighten;
+        max-width: max-content;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      label {
+        color: rgb(54, 39, 6);
+        font-family: Helvetica;
+        font-size:100%
+      }
+      .input-section {
+        margin: auto;
+        padding: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+
+  <body>
+    <section class="input-section">
+      <h1 style="text-align:center;font-family:Helvetica;font-size:300%;color:rgb(153, 77, 82);"><b>Stock Market News Search - S&P 500</b></h1>
+      <img src="https://blog.roboforex.com/wp-content/uploads/2020/10/16-1.jpg" style="height:300px;width:700px">
+      <p style="text-align:center;font-family:Helvetica;font-size:100%;color:rgb(153, 77, 82);"><b>Are you interested in investing in stocks?</b></p>
+      <p style="text-align:center;font-family:Helvetica;font-size:100%;color:rgb(153, 77, 82);"><b>This is a search engine that helps you quickly get the news and stock prices of S&P 500 companies in the past month.</b></p>
+      <p style="text-align:center;font-family:Helvetica;font-size:100%;color:rgb(153, 77, 82);"><b>Please enter the company name and time period you are interested in.</b></p>
+
+      <hr style="width:100%;text-align:center">
+
+      <form action="/search/" method="POST">
+        <div class="input-group">
+          <label for="name">Company Name</label>
+          <input id="name" name="company" type="text"/>
+        </div>
+
+        <hr style="width:100%;text-align:center">
+
+        <div class="input-group">
+          <label for="start_date">Start Date</label>
+          <input id="start_date" name="start_date" type="date" min="2022-03-21" max="2022-04-19" placeholder="2022-MM-DD"/>
+
+          <label for="end_date">End Date</label>
+          <input id="end_date" name="end_date" type="date" min="2022-03-21" max="2022-04-19" placeholder="2022-MM-DD"/>
+        </div>
+
+        <hr style="width:100%;text-align:center">
+
+        <br>
+        <button type="submit" style="background:darkcyan;color:white;height:30px;width:100px">Search</button>
+
+      </form>
+    </section>
+  </body>
+</html>

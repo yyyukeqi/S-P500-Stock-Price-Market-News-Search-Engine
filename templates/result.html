@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <title> Stock Price and Company News </title>
+    <style>
+      body {
+        background-color: rgba(255,255,255,0.9);
+        background-image: url('https://www.skillsuccess.com/wp-content/uploads/2020/08/stock-market-chart-2.jpg');
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-blend-mode: lighten;
+        max-width: max-content;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+  </head>
+
+
+<body>
+  <section class="input-section">
+    <h1 style="text-align:left;font-family:Helvetica;font-size:300%;color:rgb(8, 8, 8);"><b>Stock Market News Search - S&P 500</b></h1>
+    <p style="text-align:left;font-family:Helvetica;font-size:100%;color:rgb(17, 17, 17);"><b>Dataset Resource: Yahoo Finance, News API </b></p>
+    <h2 style="text-align:left;font-family:Helvetica;font-size:200%;color:rgb(8, 8, 8);"><b>Updated: {{ update_date }}</b></h1>
+    
+  </section>
+
+  <h2 style="text-align:left;font-family:Helvetica;font-size:150%;color:rgb(8, 8, 8);"><b>Company: {{ company }}</b></h2>
+  <h2>Stock Prices Chart</h2>
+  <img src="{{ image }}" />
+
+
+<style>
+  table.tb { border-collapse: collapse; width: 1200px; table-layout:fixed; word-wrap:break-word;}
+  .tb th, .tb td { padding: 5px; border: solid 1px #777; }
+  .tb th { background-color: rgba(153, 77, 82,0.5);}
+  .tb tr:nth-child(even) { background-color: rgba(153, 77, 82,0.5);}
+</style>
+
+<h2>Stock Prices</h2>
+<table class = "tb">
+    <thead>
+        <tr>
+            {% for col in column_names1 %}
+            <th>{{ col }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in result1 %}
+        <tr>
+            {% for col in column_names1 %}
+            <td>{{ row[col] }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<br>
+<h2>Related News</h2>
+  <table class = "tb">
+    <thead>
+      <tr>
+          {% for col in column_names %}
+          <th>{{ col }}</th>
+          {% endfor %}
+      </tr>
+    </thead>
+   <tbody>
+      {% for row in result %}
+      <tr>
+          {% for col in column_names %}
+          <td>{{ row[col] }}</td>
+          {% endfor %}
+      </tr>
+      {% endfor %}
+   </tbody>
+ </table>
+
+</body>
+</html>
