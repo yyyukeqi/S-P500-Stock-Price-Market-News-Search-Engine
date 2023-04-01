@@ -9,4 +9,4 @@ We build a sample information retrieval system with big data obtained from REST 
 - Last but not least, we use Flask which is a web development framework developed in Python. It is easy to use and show our result.
 
 
-<img align="center" src="https://github.com/yyyukeqi/S-P500-Stock-Price-Market-News-Search-Engine/blob/main/images/ETL%20pipeline.png" width="375" height="240" />
+<img align="center" src="https://github.com/yyyukeqi/S-P500-Stock-Price-Market-News-Search-Engine/blob/main/images/ETL%20pipeline.png" width="600" height="384" />
